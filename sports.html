@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+    <link href="games.css" rel="stylesheet">
+    <title>Welcome To India</title>
+    <link rel="shortcut icon" href="images/india-flag.png">
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="aa.html">Architecture & Art</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="culture.html">Cultures</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="sports.html">Sports</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<body>
+<div class="bg">
+<h2 style="text-align:center">Different Types of Sports in India</h2>
+
+<div class="container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="images/cricket.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="images/filed-hockey.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="images/Badminton.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="images/kabadi.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="images/wrestling.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="images/tennis.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="images/cricket.jpg" style="width:100%" onclick="currentSlide(1)" alt="Cricket">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/filed-hockey.jpg" style="width:100%" onclick="currentSlide(2)" alt="Field Hockey">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/Badminton.jpg" style="width:100%" onclick="currentSlide(3)" alt="Badminton">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/kabadi.jpg" style="width:100%" onclick="currentSlide(4)" alt="Kabadi">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/wrestling.jpg" style="width:100%" onclick="currentSlide(5)" alt="Wrestling">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="images/tennis.jpg" style="width:100%" onclick="currentSlide(6)" alt="Tennis">
+        </div>
+    </div>
+</div>
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+</script>
+<footer>
+    <p>&copy; 2018, Welcome To India, Ronakkumar Brahmbhatt</p>
+</footer>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

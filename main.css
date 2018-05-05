@@ -1,0 +1,51 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    color: #5a5a5a;
+}
+.bg {
+    /* The image used */
+    background-image: url("images/gradient.jpg");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    color: black;
+}
+h3 {
+    padding: 2rem;
+    color: black;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class*/
+.carousel {
+    margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption*/
+.carousel-caption {
+    bottom: 1rem;
+    z-index: 10;
+    color: black;
+}
+/* the styles for the footer */
+footer {
+    clear: both;
+}
+footer p {
+    text-align: center;
+    color: black;
+    padding:1em 1em;
+}
